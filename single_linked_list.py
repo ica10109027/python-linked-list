@@ -1,21 +1,21 @@
 #custom node & linked list class
-class node:
+class Node:
     def __init__(self,data):
         self.data = data
         self.next = None
 
-class linkedlist:
+class Linkedlist:
     def __init__(self):
         self.head = None
 
 #menambahkan elemen linked list
     def add_to_front(self, data):
-        new_node = node(data)
+        new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
 
     def add_to_end(self, data):
-        new_node = node(data)
+        new_node = Node(data)
         if self.head is None:
             self.head = new_node
             return
@@ -52,7 +52,7 @@ class linkedlist:
         print()
 
 #membuat dan mencetak linked list
-linked_list = linkedlist()
+linked_list = Linkedlist()
 
 linked_list.add_to_front(3)
 linked_list.add_to_front(2)
